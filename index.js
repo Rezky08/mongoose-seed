@@ -55,13 +55,13 @@ Seeder.prototype.connect = function(...params) {
         consoleLog(_this, 'Successfully initialized mongoose-seed');
         cb();
     } else {
-        if (opts) {
-            opts.useNewUrlParser = true;
-        } else {
-            opts = {
-                useNewUrlParser: true
-            };
-        }
+//         if (opts) {
+//             opts.useNewUrlParser = true;
+//         } else {
+//             opts = {
+//                 useNewUrlParser: true
+//             };
+//         }
 
         mongoose.connect(db, opts, function (err) {
             afterConnect(_this, err, cb);
